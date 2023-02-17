@@ -1,4 +1,5 @@
 # @ga-innoval/react-native-ui
+[![CI](https://github.com/ga-innoval/react-native-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/ga-innoval/react-native-ui/actions/workflows/ci.yml)
 
 Una colección de componentes para React Native personalizables y listos para producción, siguiendo las pautas de diseño de Innoval.
 
