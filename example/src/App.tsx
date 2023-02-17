@@ -1,18 +1,18 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@ga-innoval/react-native-ui';
+import { StyleSheet, View } from 'react-native';
+import { PrimaryButton } from '@ga-innoval/react-native-ui';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <PrimaryButton
+        style={{ marginBottom: 10 }}
+        text="Press me"
+        loading={false}
+        onPress={() => {}}
+      />
+      <PrimaryButton text="Press me" loading={true} onPress={() => {}} />
     </View>
   );
 }
@@ -20,7 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    padding: 10,
     justifyContent: 'center',
   },
   box: {

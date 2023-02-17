@@ -4,19 +4,40 @@ Una colección de componentes para React Native personalizables y listos para pr
 
 ## Installation
 
-```sh
+```bash
 npm install @ga-innoval/react-native-ui
+```
+
+or
+
+```bash
+yarn add @ga-innoval/react-native-ui
 ```
 
 ## Usage
 
 ```js
-import { multiply } from '@ga-innoval/react-native-ui';
+import React from 'react';
+import { View, Text } from 'react-native';
+import { ChipButton } from '@ga-innoval/react-native-ui';
 
-// ...
-
-const result = await multiply(3, 7);
+export function Component() {
+  return (
+    <View>
+      <ChipButton
+        text="Click me!"
+        backgroundColor={'green'}
+        onPress={() => console.log('Clicked!')}
+        icon="alert"
+      />
+    </View>
+  );
+}
 ```
+
+## Docs
+
+[Check the docs](https://innoval-ui-docs.vercel.app/docs/intro)
 
 ## Contributing
 

@@ -1,3 +1,7 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import { NativeModules } from 'react-native';
+
+import { PrimaryButton } from './components/Primary.Button';
+
+export { PrimaryButton };
+
+export default NativeModules.RNInnovalUiComponentsModule;
