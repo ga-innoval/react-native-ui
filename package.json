@@ -27,13 +27,14 @@
     "!**/.*"
   ],
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepack": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn install"
+    "bootstrap": "yarn example && yarn install",
+    "test watch": "jest --watch"
   },
   "keywords": [
     "react-native",
