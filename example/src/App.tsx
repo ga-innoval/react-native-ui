@@ -10,7 +10,7 @@ export default function App() {
         style={{ marginBottom: 10 }}
         text="Press me"
         loading={false}
-        onPress={() => {}}
+        onPress={() => console.log('press')}
       />
       <PrimaryButton text="Press me" loading={true} onPress={() => {}} />
     </View>
@@ -22,10 +22,5 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });

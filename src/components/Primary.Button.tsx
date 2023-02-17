@@ -20,7 +20,7 @@ export function PrimaryButton({
   ];
   return (
     <Pressable
-      onPress={onPress}
+      onPress={loading ? null : onPress}
       android_ripple={{ borderless: false }}
       style={buttonStyles}
       {...otherButtonProps}
