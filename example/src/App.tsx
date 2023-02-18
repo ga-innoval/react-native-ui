@@ -33,7 +33,6 @@ export default function App() {
       <PrimaryButton
         style={styles.marginBottom}
         text="Open bottom modal"
-        loading={false}
         onPress={() => setIsBottomModalVisible(true)}
       />
 
@@ -42,7 +41,6 @@ export default function App() {
           Esta es una alerta que puede contener cualquier componente!
         </Text>
         <PrimaryButton
-          loading={false}
           text="Entendido"
           onPress={() => setIsAlertVisible(false)}
         />
@@ -56,6 +54,11 @@ export default function App() {
         <Text style={styles.marginBottom}>
           Este es una modal que puede contener cualquier componente!
         </Text>
+        <PrimaryButton
+          onPress={() => {}}
+          style={styles.floatBottom}
+          text="Entendido!"
+        />
       </BottomModal>
     </View>
   );
@@ -68,6 +71,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   marginBottom: {
+    marginBottom: 10,
+  },
+  floatBottom: {
+    marginTop: 'auto',
     marginBottom: 10,
   },
 });

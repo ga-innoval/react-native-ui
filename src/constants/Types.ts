@@ -16,7 +16,7 @@ export interface Icon {
 export interface ButtonProps extends PressableProps {
   text: string;
   onPress: () => void;
-  loading: boolean;
+  loading?: boolean;
   style?: ViewStyle;
 }
 

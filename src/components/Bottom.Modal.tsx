@@ -48,6 +48,7 @@ export function BottomModal({
       <Modal animationType="slide" transparent={true} visible={visible}>
         <View style={styles.menuContainer}>
           <Pressable
+            testID="modalPressableArea"
             style={[
               styles.dismissArea,
               isKeyboardVisible && { height: screenHeight / 8 },
@@ -61,7 +62,7 @@ export function BottomModal({
               containerStyle,
             ]}
           >
-            <View style={{ padding: spacing.md }}>{children}</View>
+            <View style={styles.childrenContainer}>{children}</View>
           </View>
         </View>
       </Modal>
@@ -90,5 +91,10 @@ const styles = StyleSheet.create({
   dismissArea: {
     position: 'relative',
     height: screenHeight / 2,
+  },
+  childrenContainer: {
+    flex: 1,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.lg,
   },
 });
