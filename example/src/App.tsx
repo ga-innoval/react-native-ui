@@ -1,18 +1,24 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
-import { StyleSheet, Text, View } from 'react-native';
-import { PrimaryButton, AlertModal } from '@ga-innoval/react-native-ui';
+import { StyleSheet, View } from 'react-native';
+import {
+  PrimaryButton,
+  AlertModal,
+  BottomModal,
+  Title,
+  Text,
+} from '@ga-innoval/react-native-ui';
 
 export default function App() {
-  const [isAlertVisible, setIsAlertVisible] = React.useState(false);
-  const [isPrimaryButtonLoading, setPrimaryButtonLoading] =
-    React.useState(false);
+  const [isAlertVisible, setIsAlertVisible] = useState(false);
+  const [isPrimaryButtonLoading, setPrimaryButtonLoading] = useState(false);
+  const [isBottomModalVisible, setIsBottomModalVisible] = useState(true);
 
   const handlePrimaryButtonPress = () => {
     setPrimaryButtonLoading(true);
     setTimeout(() => {
-      setPrimaryButtonLoading(false);
       setIsAlertVisible(true);
+      setPrimaryButtonLoading(false);
     }, 1000);
   };
 
@@ -20,9 +26,15 @@ export default function App() {
     <View style={styles.container}>
       <PrimaryButton
         style={styles.marginBottom}
-        text="Press me"
+        text="Open Alert"
         loading={isPrimaryButtonLoading}
         onPress={handlePrimaryButtonPress}
+      />
+      <PrimaryButton
+        style={styles.marginBottom}
+        text="Open bottom modal"
+        loading={false}
+        onPress={() => setIsBottomModalVisible(true)}
       />
 
       <AlertModal title="Alerta" visible={isAlertVisible}>
@@ -35,6 +47,16 @@ export default function App() {
           onPress={() => setIsAlertVisible(false)}
         />
       </AlertModal>
+
+      <BottomModal
+        visible={isBottomModalVisible}
+        onDismiss={() => setIsBottomModalVisible(false)}
+      >
+        <Title style={styles.marginBottom}>Titulo del modal</Title>
+        <Text style={styles.marginBottom}>
+          Este es una modal que puede contener cualquier componente!
+        </Text>
+      </BottomModal>
     </View>
   );
 }

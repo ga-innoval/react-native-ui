@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, StyleSheet, Pressable, ActivityIndicator } from 'react-native';
+import { StyleSheet, Pressable, ActivityIndicator } from 'react-native';
 import { Theme } from '../constants/Theme';
 import type { PrimaryButtonProps } from '../constants/Types';
+import { Text } from './Styled.Text';
 
 const { spacing, colors } = Theme;
 

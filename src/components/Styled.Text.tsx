@@ -14,7 +14,7 @@ export function Title({ style, children, ...otherProps }: TextProps) {
 }
 
 export function Text({ style, children, ...otherProps }: TextProps) {
-  const textStyles = [style, styles.text];
+  const textStyles = [styles.text, style];
   return (
     <DefaultText {...otherProps} style={textStyles}>
       {children}
@@ -26,8 +26,10 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     color: colors.tint,
+    fontSize: 20,
   },
   text: {
     color: colors.darkText,
+    fontSize: 16,
   },
 });
