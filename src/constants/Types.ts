@@ -31,6 +31,7 @@ export interface ActionButtonProps extends ButtonProps {
 export interface AlertModalProps extends ModalProps {
   title: string;
   children: ReactNode;
+  visible: boolean;
 }
 
 export interface BottomModalProps {

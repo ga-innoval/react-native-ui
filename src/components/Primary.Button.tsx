@@ -16,7 +16,9 @@ export function PrimaryButton({
   const buttonStyles = [
     styles.container,
     style,
-    { backgroundColor: backgroundColor ? backgroundColor : '#232222' },
+    {
+      backgroundColor: backgroundColor ? backgroundColor : Theme.colors.tint,
+    },
   ];
   return (
     <Pressable
