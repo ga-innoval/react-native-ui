@@ -7,11 +7,7 @@ import type {
   TextInputProps as DefaultTextInputProps,
 } from 'react-native';
 
-export interface Icon {
-  name: string;
-  color: ColorValue;
-  backgroundColor?: ColorValue;
-}
+import type { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 
 export interface ButtonProps extends PressableProps {
   text: string;
@@ -25,7 +21,7 @@ export interface PrimaryButtonProps extends ButtonProps {
 }
 
 export interface ActionButtonProps extends ButtonProps {
-  icon?: Icon;
+  icon?: typeof Icon;
 }
 
 export interface AlertModalProps extends ModalProps {
@@ -43,7 +39,7 @@ export interface BottomModalProps {
 
 export interface ChipButtonProps {
   onPress: () => void;
-  icon?: string;
+  iconName?: keyof typeof Icon.glyphMap;
   text: string;
   backgroundColor?: ColorValue;
   containerStyle?: ViewStyle;

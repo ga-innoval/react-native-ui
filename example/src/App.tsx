@@ -37,7 +37,7 @@ export default function App() {
       />
 
       <ChipButton
-        icon="check"
+        iconName="account-plus"
         containerStyle={styles.marginBottom}
         backgroundColor={'#40ABE8'}
         text="Chip button"
