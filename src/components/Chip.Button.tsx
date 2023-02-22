@@ -1,5 +1,5 @@
 import React from 'react';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Icon from '@expo/vector-icons/MaterialCommunityIcons';
 import { Text, Pressable, StyleSheet } from 'react-native';
 
 import { Theme } from '../constants/Theme';
@@ -27,7 +27,7 @@ export function ChipButton({
       onPress={onPress}
       style={chipButtonStyles}
     >
-      {icon && <FontAwesome name={icon} size={30} color="#900" />}
+      {icon && <Icon name={icon} size={20} color="white" />}
       <Text style={styles.actionText}>{text}</Text>
     </Pressable>
   );

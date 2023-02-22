@@ -7,11 +7,7 @@ import type {
   TextInputProps as DefaultTextInputProps,
 } from 'react-native';
 
-export interface Icon {
-  name: string;
-  color: ColorValue;
-  backgroundColor?: ColorValue;
-}
+import type { Icon } from 'react-native-vector-icons/Icon';
 
 export interface ButtonProps extends PressableProps {
   text: string;
@@ -43,7 +39,7 @@ export interface BottomModalProps {
 
 export interface ChipButtonProps {
   onPress: () => void;
-  icon?: string;
+  icon?: any;
   text: string;
   backgroundColor?: ColorValue;
   containerStyle?: ViewStyle;
