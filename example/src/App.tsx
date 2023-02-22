@@ -32,19 +32,23 @@ export default function App() {
         onPress={handlePrimaryButtonPress}
       />
       <PrimaryButton
-        style={styles.marginBottom}
+        style={[styles.marginBottom]}
         text="Open bottom modal"
         onPress={() => setIsBottomModalVisible(true)}
       />
 
       <ChipButton
         iconName="account-plus"
-        containerStyle={styles.marginBottom}
+        style={styles.marginBottom}
         backgroundColor={'#40ABE8'}
         text="Chip button"
         onPress={() => {}}
       />
-      <ChipButton text="Chip button" onPress={() => {}} />
+      <ChipButton
+        style={styles.marginBottom}
+        text="Chip button"
+        onPress={() => {}}
+      />
 
       <LinkButton text="Link button" onPress={() => {}} />
 

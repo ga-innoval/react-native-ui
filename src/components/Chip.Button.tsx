@@ -12,13 +12,14 @@ export function ChipButton({
   iconName,
   text,
   backgroundColor,
-  containerStyle,
+  style,
+  ...otherButtonProps
 }: ChipButtonProps) {
   const chipButtonStyles = [
     styles.container,
+    style,
     {
       backgroundColor: backgroundColor ? backgroundColor : Theme.colors.tint,
-      ...containerStyle,
     },
   ];
   return (
@@ -26,6 +27,7 @@ export function ChipButton({
       android_ripple={{ borderless: true }}
       onPress={onPress}
       style={chipButtonStyles}
+      {...otherButtonProps}
     >
       {iconName && <Icon name={iconName} size={20} color="white" />}
       <Text style={styles.actionText}>{text}</Text>

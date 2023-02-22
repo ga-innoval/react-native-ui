@@ -1,14 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Pressable, StyleSheet, Text } from 'react-native';
 import Icon from '@expo/vector-icons/MaterialCommunityIcons';
 import { Theme } from '../constants/Theme';
 import type { LinkButtonProps } from '../constants/Types';
 
 const { spacing, colors } = Theme;
 
-export function LinkButton({ text, onPress }: LinkButtonProps) {
+export function LinkButton({
+  text,
+  onPress,
+  style,
+  ...otherPressableProps
+}: LinkButtonProps) {
+  const linkButtonStyles = [styles.container, style];
   return (
-    <TouchableOpacity onPress={onPress} style={styles.container}>
+    <Pressable
+      onPress={onPress}
+      style={linkButtonStyles}
+      {...otherPressableProps}
+    >
       <Text style={{ color: colors.link }}>{text}</Text>
       <Icon
         style={{ marginLeft: spacing.sm / 2 }}
@@ -16,7 +26,7 @@ export function LinkButton({ text, onPress }: LinkButtonProps) {
         name={'arrow-right'}
         color={colors.link}
       />
-    </TouchableOpacity>
+    </Pressable>
   );
 }
 

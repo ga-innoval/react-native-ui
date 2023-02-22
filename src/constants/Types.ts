@@ -13,7 +13,7 @@ export interface ButtonProps extends PressableProps {
   text: string;
   onPress: () => void;
   loading?: boolean;
-  style?: ViewStyle;
+  style?: ViewStyle | Array<ViewStyle>;
 }
 
 export interface PrimaryButtonProps extends ButtonProps {
@@ -37,15 +37,12 @@ export interface BottomModalProps {
   containerStyle?: ViewStyle;
 }
 
-export interface ChipButtonProps {
-  onPress: () => void;
+export interface ChipButtonProps extends ButtonProps {
   iconName?: keyof typeof Icon.glyphMap;
-  text: string;
   backgroundColor?: ColorValue;
-  containerStyle?: ViewStyle;
 }
 
-export interface LinkButtonProps {
+export interface LinkButtonProps extends ButtonProps {
   text: string;
   onPress: () => void;
 }
