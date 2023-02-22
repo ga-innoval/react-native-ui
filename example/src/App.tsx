@@ -7,6 +7,7 @@ import {
   Title,
   Text,
   ChipButton,
+  LinkButton,
 } from '@ga-innoval/react-native-ui';
 
 export default function App() {
@@ -44,6 +45,8 @@ export default function App() {
         onPress={() => {}}
       />
       <ChipButton text="Chip button" onPress={() => {}} />
+
+      <LinkButton text="Link button" onPress={() => {}} />
 
       <AlertModal title="Alerta" visible={isAlertVisible}>
         <Text style={styles.marginBottom}>
