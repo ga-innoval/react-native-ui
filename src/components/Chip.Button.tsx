@@ -9,7 +9,7 @@ import type { ChipButtonProps } from '../constants/Types';
 
 export function ChipButton({
   onPress,
-  icon,
+  iconName,
   text,
   backgroundColor,
   containerStyle,
@@ -27,7 +27,7 @@ export function ChipButton({
       onPress={onPress}
       style={chipButtonStyles}
     >
-      {icon && <Icon name={icon} size={20} color="white" />}
+      {iconName && <Icon name={iconName} size={20} color="white" />}
       <Text style={styles.actionText}>{text}</Text>
     </Pressable>
   );
