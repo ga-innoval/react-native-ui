@@ -61,6 +61,8 @@
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
+    "@types/react-native-vector-icons": "^6.4.13",
+    "react-native-vector-icons": "^9.2.0",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
@@ -162,5 +164,6 @@
         }
       ]
     ]
-  }
+  },
+  "dependencies": {}
 }

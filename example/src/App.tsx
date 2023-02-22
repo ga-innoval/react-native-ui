@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { StyleSheet, View } from 'react-native';
 import {
   PrimaryButton,
@@ -7,12 +6,13 @@ import {
   BottomModal,
   Title,
   Text,
+  ChipButton,
 } from '@ga-innoval/react-native-ui';
 
 export default function App() {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
   const [isPrimaryButtonLoading, setPrimaryButtonLoading] = useState(false);
-  const [isBottomModalVisible, setIsBottomModalVisible] = useState(true);
+  const [isBottomModalVisible, setIsBottomModalVisible] = useState(false);
 
   const handlePrimaryButtonPress = () => {
     setPrimaryButtonLoading(true);
@@ -36,11 +36,21 @@ export default function App() {
         onPress={() => setIsBottomModalVisible(true)}
       />
 
+      <ChipButton
+        icon="check"
+        containerStyle={styles.marginBottom}
+        backgroundColor={'#40ABE8'}
+        text="Chip button"
+        onPress={() => {}}
+      />
+      <ChipButton text="Chip button" onPress={() => {}} />
+
       <AlertModal title="Alerta" visible={isAlertVisible}>
         <Text style={styles.marginBottom}>
           Esta es una alerta que puede contener cualquier componente!
         </Text>
         <PrimaryButton
+          style={{ marginTop: 10 * 2 }}
           text="Entendido"
           onPress={() => setIsAlertVisible(false)}
         />

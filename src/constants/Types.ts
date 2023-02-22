@@ -45,7 +45,7 @@ export interface ChipButtonProps {
   onPress: () => void;
   icon?: string;
   text: string;
-  backgroundColor: ColorValue;
+  backgroundColor?: ColorValue;
   containerStyle?: ViewStyle;
 }
 
