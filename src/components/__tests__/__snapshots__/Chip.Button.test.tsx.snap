@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChipButton /> should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "borderRadius": 100,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      },
+      {
+        "backgroundColor": "#232222",
+      },
+    ]
+  }
+>
+  <Text />
+  <Text
+    style={
+      {
+        "color": "white",
+        "fontWeight": "bold",
+        "marginLeft": 5,
+      }
+    }
+  >
+    Press me
+  </Text>
+</View>
+`;
