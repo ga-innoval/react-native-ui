@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.darkText,
-    fontSize: 16,
+    fontSize: 14,
   },
 });

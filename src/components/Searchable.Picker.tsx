@@ -1,0 +1,85 @@
+import React, { useState } from 'react';
+import { StyleSheet, Pressable, FlatList } from 'react-native';
+import { Text } from './Styled.Text';
+import { Theme } from '../constants/Theme';
+import Icon from '@expo/vector-icons/MaterialCommunityIcons';
+import { BottomModal } from './Bottom.Modal';
+import { IconTextInput } from './Icon.Text.Input';
+import type { SearchablePickerProps } from '../constants/Types';
+
+const { colors, spacing } = Theme;
+
+export function SearchablePicker({
+  placeholder,
+  data,
+  selectedItem,
+  onItemSelected,
+}: SearchablePickerProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [filterValue, setFilterValue] = useState('');
+  const filteredData = data.filter((item) =>
+    item.label.toLowerCase().includes(filterValue.toLowerCase())
+  );
+
+  return (
+    <>
+      <Pressable
+        android_ripple={{ borderless: false }}
+        onPress={() => setIsVisible(!isVisible)}
+        style={styles.container}
+      >
+        <Text>{selectedItem ? selectedItem.label : placeholder}</Text>
+        <Icon name="chevron-down" size={20} color={colors.tint} />
+      </Pressable>
+
+      <BottomModal
+        containerStyle={{ backgroundColor: colors.background }}
+        visible={isVisible}
+        onDismiss={() => setIsVisible(false)}
+      >
+        <IconTextInput
+          value={filterValue}
+          onChangeText={(textValue) => setFilterValue(textValue)}
+          iconName="magnify"
+          placeholder="Buscar ..."
+        />
+        <FlatList
+          data={filteredData}
+          renderItem={({ item }) => (
+            <Pressable
+              onPress={() => {
+                if (onItemSelected) {
+                  onItemSelected(item);
+                  setIsVisible(false);
+                }
+              }}
+              android_ripple={{ borderless: false }}
+              style={styles.pickerItem}
+            >
+              <Text>{item.label}</Text>
+            </Pressable>
+          )}
+          keyExtractor={(item) => item.label}
+        />
+      </BottomModal>
+    </>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.primary,
+    padding: spacing.md,
+    borderRadius: spacing.sm,
+    justifyContent: 'space-between',
+  },
+  pickerItem: {
+    alignItems: 'center',
+    padding: spacing.sm,
+    marginVertical: spacing.sm,
+    borderBottomWidth: 1,
+    borderColor: colors.secondary,
+  },
+});

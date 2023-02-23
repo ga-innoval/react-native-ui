@@ -9,6 +9,8 @@ import {
   ChipButton,
   LinkButton,
   IconTextInput,
+  SearchablePicker,
+  PickerItem,
 } from '@ga-innoval/react-native-ui';
 
 export default function App() {
@@ -16,6 +18,7 @@ export default function App() {
   const [isPrimaryButtonLoading, setPrimaryButtonLoading] = useState(false);
   const [isBottomModalVisible, setIsBottomModalVisible] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const [selectedFruit, setSelectedFruit] = useState<PickerItem | null>(null);
 
   const handlePrimaryButtonPress = () => {
     setPrimaryButtonLoading(true);
@@ -55,10 +58,28 @@ export default function App() {
       <LinkButton text="Link button" onPress={() => {}} />
 
       <IconTextInput
+        containerStyle={styles.marginBottom}
         onChangeText={(value) => setSearchValue(value)}
         value={searchValue}
         iconName="magnify"
         placeholder="Buscar ..."
+      />
+
+      <SearchablePicker
+        selectedItem={selectedFruit}
+        onItemSelected={(item) => setSelectedFruit({ ...item })}
+        data={[
+          { label: 'Banana', value: 0 },
+          { label: 'Apple', value: 1 },
+          { label: 'Watermelon', value: 2 },
+          { label: 'Orange', value: 3 },
+          { label: 'Lemon', value: 4 },
+          { label: 'Pineapple', value: 5 },
+          { label: 'Grape', value: 6 },
+          { label: 'Avocado', value: 7 },
+          { label: 'Mango', value: 8 },
+        ]}
+        placeholder="Selecciona una fruta"
       />
 
       <AlertModal title="Alerta" visible={isAlertVisible}>
@@ -95,6 +116,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     justifyContent: 'center',
+    backgroundColor: '#f8f8fa',
   },
   marginBottom: {
     marginBottom: 10,

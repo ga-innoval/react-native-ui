@@ -53,13 +53,14 @@ export interface MaskContainerProps {
 
 export interface TextInputProps extends DefaultTextInputProps {
   iconName: keyof typeof Icon.glyphMap;
+  containerStyle?: ViewStyle | ViewStyle[];
 }
 
-type PickerItem = { label: string; value: string | number };
+export type PickerItem = { label: string; value: string | number };
 
 export interface SearchablePickerProps {
-  text: string;
+  placeholder: string;
   data: Array<PickerItem>;
-  selectedItem: PickerItem;
-  onItemSelected: (item: PickerItem) => void;
+  selectedItem?: PickerItem | null;
+  onItemSelected?: (item: PickerItem) => void;
 }

@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchablePicker /> should render modal correctly 1`] = `
+[
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderRadius": 10,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#7A7878",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      Selecciona una fruta
+    </Text>
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": "#232222",
+            "fontSize": 20,
+          },
+          undefined,
+          {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      󰅀
+    </Text>
+  </View>,
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      style={
+        {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          [
+            {
+              "height": 667,
+              "position": "relative",
+            },
+            false,
+          ]
+        }
+        testID="modalPressableArea"
+      />
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "white",
+              "borderTopLeftRadius": 15,
+              "borderTopRightRadius": 15,
+              "bottom": 0,
+              "height": 667,
+              "position": "relative",
+            },
+            false,
+            {
+              "backgroundColor": "#f8f8fa",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "flex": 1,
+              "paddingHorizontal": 15,
+              "paddingVertical": 25,
+            }
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "white",
+                  "borderColor": "#E1E1E3",
+                  "borderRadius": 10,
+                  "borderWidth": 2,
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": "#E1E1E3",
+                  "borderBottomLeftRadius": 5,
+                  "borderColor": "#E1E1E3",
+                  "borderTopLeftRadius": 5,
+                  "borderWidth": 2,
+                  "padding": 10,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#232222",
+                      "fontSize": 16,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+              >
+                󰍉
+              </Text>
+            </View>
+            <TextInput
+              onChangeText={[Function]}
+              placeholder="Buscar ..."
+              placeholderTextColor="#0007"
+              style={
+                [
+                  {
+                    "backgroundColor": "white",
+                    "flex": 1,
+                    "marginVertical": 10,
+                    "paddingHorizontal": 10,
+                  },
+                  null,
+                ]
+              }
+              value=""
+            />
+          </View>
+          <RCTScrollView
+            data={
+              [
+                {
+                  "label": "Banana",
+                  "value": 0,
+                },
+                {
+                  "label": "Apple",
+                  "value": 1,
+                },
+              ]
+            }
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={[]}
+            viewabilityConfigCallbackPairs={[]}
+          >
+            <View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              >
+                <View
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "borderBottomWidth": 1,
+                      "borderColor": "#E1E1E3",
+                      "marginVertical": 10,
+                      "padding": 10,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#7A7878",
+                          "fontSize": 14,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Banana
+                  </Text>
+                </View>
+              </View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              >
+                <View
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "borderBottomWidth": 1,
+                      "borderColor": "#E1E1E3",
+                      "marginVertical": 10,
+                      "padding": 10,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#7A7878",
+                          "fontSize": 14,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Apple
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+      </View>
+    </View>
+  </Modal>,
+  <View
+    style={
+      {
+        "backgroundColor": "rgba(0,0,0,0.75)",
+        "bottom": 0,
+        "elevation": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "zIndex": 1,
+      }
+    }
+  />,
+]
+`;
+
+exports[`<SearchablePicker /> should render picker button correctly 1`] = `
+[
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderRadius": 10,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#7A7878",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      Selecciona una fruta
+    </Text>
+    <Text />
+  </View>,
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  />,
+]
+`;
