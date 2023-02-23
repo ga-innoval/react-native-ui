@@ -16,7 +16,7 @@ export function PrimaryButton({
 }: PrimaryButtonProps) {
   const buttonStyles = [
     styles.container,
-    style,
+    style ? style : null,
     {
       backgroundColor: backgroundColor ? backgroundColor : Theme.colors.tint,
     },

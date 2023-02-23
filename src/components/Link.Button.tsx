@@ -12,7 +12,7 @@ export function LinkButton({
   style,
   ...otherPressableProps
 }: LinkButtonProps) {
-  const linkButtonStyles = [styles.container, style];
+  const linkButtonStyles = [styles.container, style ? style : null];
   return (
     <Pressable
       onPress={onPress}
