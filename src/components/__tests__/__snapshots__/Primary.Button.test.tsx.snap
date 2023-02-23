@@ -36,7 +36,7 @@ exports[`<PrimaryButton custom style /> Should render correctly 1`] = `
       [
         {
           "color": "#7A7878",
-          "fontSize": 16,
+          "fontSize": 14,
         },
         {
           "color": "white",
@@ -84,7 +84,7 @@ exports[`<PrimaryButton loading={false} /> should render correctly 1`] = `
       [
         {
           "color": "#7A7878",
-          "fontSize": 16,
+          "fontSize": 14,
         },
         {
           "color": "white",

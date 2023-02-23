@@ -3,14 +3,17 @@
 exports[`<IconTextInput /> should render correctly 1`] = `
 <View
   style={
-    {
-      "alignItems": "center",
-      "backgroundColor": "white",
-      "borderColor": "#E1E1E3",
-      "borderRadius": 10,
-      "borderWidth": 2,
-      "flexDirection": "row",
-    }
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#E1E1E3",
+        "borderRadius": 10,
+        "borderWidth": 2,
+        "flexDirection": "row",
+      },
+      null,
+    ]
   }
 >
   <View
@@ -31,12 +34,15 @@ exports[`<IconTextInput /> should render correctly 1`] = `
     placeholder="Buscar ..."
     placeholderTextColor="#0007"
     style={
-      {
-        "backgroundColor": "white",
-        "flex": 1,
-        "marginVertical": 10,
-        "paddingHorizontal": 10,
-      }
+      [
+        {
+          "backgroundColor": "white",
+          "flex": 1,
+          "marginVertical": 10,
+          "paddingHorizontal": 10,
+        },
+        null,
+      ]
     }
   />
 </View>
