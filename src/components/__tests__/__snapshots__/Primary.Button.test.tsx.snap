@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrimaryButton custom style /> Should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 10,
+        "justifyContent": "center",
+        "padding": 15,
+      },
+      {
+        "marginTop": 10,
+      },
+      {
+        "backgroundColor": "#232222",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#7A7878",
+          "fontSize": 16,
+        },
+        {
+          "color": "white",
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    Press me
+  </Text>
+</View>
+`;
+
+exports[`<PrimaryButton loading={false} /> should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 10,
+        "justifyContent": "center",
+        "padding": 15,
+      },
+      null,
+      {
+        "backgroundColor": "#232222",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#7A7878",
+          "fontSize": 16,
+        },
+        {
+          "color": "white",
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    Press me
+  </Text>
+</View>
+`;
+
+exports[`<PrimaryButton loading={true} /> should render correctly 1`] = `
+<View
+  accessibilityHint="button"
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 10,
+        "justifyContent": "center",
+        "padding": 15,
+      },
+      null,
+      {
+        "backgroundColor": "#232222",
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    color="white"
+    size="small"
+  />
+</View>
+`;
