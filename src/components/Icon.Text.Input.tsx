@@ -8,17 +8,24 @@ const { colors, spacing } = Theme;
 
 export function IconTextInput({
   iconName,
+  containerStyle,
+  style,
   ...otherInputProps
 }: TextInputProps) {
+  const textInputContainerStyle = [
+    styles.container,
+    containerStyle ? containerStyle : null,
+  ];
+  const textInputStyle = [styles.input, style ? style : null];
   return (
-    <View style={styles.container}>
+    <View style={textInputContainerStyle}>
       <View style={styles.iconContainer}>
         <Icon name={iconName} size={16} color={colors.tint} />
       </View>
 
       <DefaultTextInput
         {...otherInputProps}
-        style={styles.input}
+        style={textInputStyle}
         placeholderTextColor="#0007"
       />
     </View>
