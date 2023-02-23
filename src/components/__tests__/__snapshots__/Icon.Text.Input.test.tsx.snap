@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconTextInput /> should render correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderColor": "#E1E1E3",
+      "borderRadius": 10,
+      "borderWidth": 2,
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#E1E1E3",
+        "borderBottomLeftRadius": 5,
+        "borderColor": "#E1E1E3",
+        "borderTopLeftRadius": 5,
+        "borderWidth": 2,
+        "padding": 10,
+      }
+    }
+  >
+    <Text />
+  </View>
+  <TextInput
+    placeholder="Buscar ..."
+    placeholderTextColor="#0007"
+    style={
+      {
+        "backgroundColor": "white",
+        "flex": 1,
+        "marginVertical": 10,
+        "paddingHorizontal": 10,
+      }
+    }
+  />
+</View>
+`;

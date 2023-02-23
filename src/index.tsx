@@ -6,6 +6,7 @@ import { BottomModal } from './components/Bottom.Modal';
 import { ChipButton } from './components/Chip.Button';
 import { LinkButton } from './components/Link.Button';
 import { Title, Text } from './components/Styled.Text';
+import { IconTextInput } from './components/Icon.Text.Input';
 
 export {
   PrimaryButton,
@@ -15,6 +16,7 @@ export {
   BottomModal,
   Title,
   Text,
+  IconTextInput,
 };
 
 export default NativeModules.RNInnovalUiComponentsModule;

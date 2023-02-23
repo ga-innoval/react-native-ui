@@ -52,7 +52,7 @@ export interface MaskContainerProps {
 }
 
 export interface TextInputProps extends DefaultTextInputProps {
-  icon: string;
+  iconName: keyof typeof Icon.glyphMap;
 }
 
 type PickerItem = { label: string; value: string | number };

@@ -8,12 +8,14 @@ import {
   Text,
   ChipButton,
   LinkButton,
+  IconTextInput,
 } from '@ga-innoval/react-native-ui';
 
 export default function App() {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
   const [isPrimaryButtonLoading, setPrimaryButtonLoading] = useState(false);
   const [isBottomModalVisible, setIsBottomModalVisible] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
   const handlePrimaryButtonPress = () => {
     setPrimaryButtonLoading(true);
@@ -51,6 +53,13 @@ export default function App() {
       />
 
       <LinkButton text="Link button" onPress={() => {}} />
+
+      <IconTextInput
+        onChangeText={(value) => setSearchValue(value)}
+        value={searchValue}
+        iconName="magnify"
+        placeholder="Buscar ..."
+      />
 
       <AlertModal title="Alerta" visible={isAlertVisible}>
         <Text style={styles.marginBottom}>
