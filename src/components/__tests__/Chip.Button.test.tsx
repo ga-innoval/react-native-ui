@@ -9,7 +9,7 @@ const eventData = {
   },
 };
 
-describe('<ChipButton />', () => {
+describe('<ChipButton /> no custom style', () => {
   let component: any = null;
   const mockFn = jest.fn();
 
@@ -28,5 +28,26 @@ describe('<ChipButton />', () => {
     const button = screen.getByText(/press/i);
     fireEvent.press(button, eventData);
     expect(mockFn).toBeCalledTimes(1);
+  });
+});
+
+describe('<ChipButton /> custom style', () => {
+  let component: any = null;
+  const mockFn = jest.fn();
+
+  beforeEach(() => {
+    component = render(
+      <ChipButton
+        style={{ marginTop: 10 }}
+        text="Press me"
+        iconName="account"
+        onPress={mockFn}
+      />
+    );
+  });
+
+  it('should render correctly', () => {
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

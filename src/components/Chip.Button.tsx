@@ -17,7 +17,7 @@ export function ChipButton({
 }: ChipButtonProps) {
   const chipButtonStyles = [
     styles.container,
-    style,
+    style ? style : null,
     {
       backgroundColor: backgroundColor ? backgroundColor : Theme.colors.tint,
     },

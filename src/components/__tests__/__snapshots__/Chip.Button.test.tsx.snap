@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ChipButton /> should render correctly 1`] = `
+exports[`<ChipButton /> custom style should render correctly 1`] = `
 <View
   accessible={true}
   collapsable={false}
@@ -25,6 +25,76 @@ exports[`<ChipButton /> should render correctly 1`] = `
         "paddingHorizontal": 15,
         "paddingVertical": 10,
       },
+      {
+        "marginTop": 10,
+      },
+      {
+        "backgroundColor": "#232222",
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": "white",
+          "fontSize": 20,
+        },
+        undefined,
+        {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    󰀄
+  </Text>
+  <Text
+    style={
+      {
+        "color": "white",
+        "fontWeight": "bold",
+        "marginLeft": 5,
+      }
+    }
+  >
+    Press me
+  </Text>
+</View>
+`;
+
+exports[`<ChipButton /> no custom style should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "borderRadius": 100,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      },
+      null,
       {
         "backgroundColor": "#232222",
       },
