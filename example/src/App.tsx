@@ -43,8 +43,8 @@ export default function App() {
       />
 
       <ChipButton
-        iconName="door-open"
         style={styles.marginBottom}
+        iconName="door-open"
         backgroundColor={'#40ABE8'}
         text="Open alert"
         onPress={() => setIsAlertVisible(true)}

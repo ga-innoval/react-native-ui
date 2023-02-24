@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Pressable, ActivityIndicator } from 'react-native';
-import { Theme } from '../constants/Theme';
+import { usePlatform } from '../hooks/usePlatform';
+import { pressedOpacity, Theme } from '../constants/Theme';
 import type { PrimaryButtonProps } from '../constants/Types';
 import { Text } from './Styled.Text';
 
@@ -14,6 +15,9 @@ export function PrimaryButton({
   style,
   ...otherButtonProps
 }: PrimaryButtonProps) {
+  const platform = usePlatform();
+  const { isIos, isAndroid } = platform;
+
   const buttonStyles = [
     styles.container,
     style ? style : null,
@@ -21,11 +25,16 @@ export function PrimaryButton({
       backgroundColor: backgroundColor ? backgroundColor : Theme.colors.tint,
     },
   ];
+
   return (
     <Pressable
       onPress={loading ? null : onPress}
       android_ripple={{ borderless: false }}
-      style={buttonStyles}
+      style={({ pressed }) => [
+        ...buttonStyles,
+        pressed && isIos && pressedOpacity,
+        pressed && isAndroid && !backgroundColor && pressedOpacity,
+      ]}
       {...otherButtonProps}
     >
       {loading && <ActivityIndicator size={'small'} color={colors.lightText} />}
