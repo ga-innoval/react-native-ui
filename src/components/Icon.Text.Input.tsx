@@ -16,13 +16,14 @@ export function IconTextInput({
     styles.container,
     containerStyle ? containerStyle : null,
   ];
+
   const textInputStyle = [styles.input, style ? style : null];
+
   return (
     <View style={textInputContainerStyle}>
       <View style={styles.iconContainer}>
         <Icon name={iconName} size={16} color={colors.tint} />
       </View>
-
       <DefaultTextInput
         {...otherInputProps}
         style={textInputStyle}
@@ -40,19 +41,18 @@ const styles = StyleSheet.create({
     borderRadius: spacing.sm,
     borderWidth: 2,
     borderColor: colors.secondary,
+    overflow: 'hidden',
   },
   input: {
     flex: 1,
     backgroundColor: colors.primary,
     paddingHorizontal: spacing.sm,
-    marginVertical: spacing.sm,
+    // marginVertical: spacing.sm,
   },
   iconContainer: {
     padding: spacing.sm,
     backgroundColor: colors.secondary,
     borderColor: colors.secondary,
     borderWidth: 2,
-    borderTopLeftRadius: spacing.sm / 2,
-    borderBottomLeftRadius: spacing.sm / 2,
   },
 });
