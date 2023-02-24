@@ -32,7 +32,7 @@ export default function App() {
     <View style={styles.container}>
       <PrimaryButton
         style={styles.marginBottom}
-        text="Open Alert"
+        text="Open alert"
         loading={isPrimaryButtonLoading}
         onPress={handlePrimaryButtonPress}
       />
@@ -43,16 +43,16 @@ export default function App() {
       />
 
       <ChipButton
-        iconName="account-plus"
+        iconName="door-open"
         style={styles.marginBottom}
         backgroundColor={'#40ABE8'}
-        text="Chip button"
-        onPress={() => {}}
+        text="Open alert"
+        onPress={() => setIsAlertVisible(true)}
       />
       <ChipButton
         style={styles.marginBottom}
-        text="Chip button"
-        onPress={() => {}}
+        text="Open bottom modal"
+        onPress={() => setIsBottomModalVisible(true)}
       />
 
       <LinkButton text="Link button" onPress={() => {}} />
@@ -102,7 +102,7 @@ export default function App() {
           Este es una modal que puede contener cualquier componente!
         </Text>
         <PrimaryButton
-          onPress={() => {}}
+          onPress={() => setIsBottomModalVisible(false)}
           style={styles.floatBottom}
           text="Entendido!"
         />
