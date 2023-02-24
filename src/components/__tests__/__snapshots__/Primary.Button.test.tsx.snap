@@ -28,6 +28,8 @@ exports[`<PrimaryButton custom style /> Should render correctly 1`] = `
       {
         "backgroundColor": "#232222",
       },
+      false,
+      false,
     ]
   }
 >
@@ -76,6 +78,8 @@ exports[`<PrimaryButton loading={false} /> should render correctly 1`] = `
       {
         "backgroundColor": "#232222",
       },
+      false,
+      false,
     ]
   }
 >
@@ -125,6 +129,8 @@ exports[`<PrimaryButton loading={true} /> should render correctly 1`] = `
       {
         "backgroundColor": "#232222",
       },
+      false,
+      false,
     ]
   }
 >

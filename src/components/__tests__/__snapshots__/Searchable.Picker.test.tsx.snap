@@ -135,6 +135,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
                   "borderRadius": 10,
                   "borderWidth": 2,
                   "flexDirection": "row",
+                  "overflow": "hidden",
                 },
                 null,
               ]
@@ -144,9 +145,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
               style={
                 {
                   "backgroundColor": "#E1E1E3",
-                  "borderBottomLeftRadius": 5,
                   "borderColor": "#E1E1E3",
-                  "borderTopLeftRadius": 5,
                   "borderWidth": 2,
                   "padding": 10,
                 }
@@ -183,7 +182,6 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
                   {
                     "backgroundColor": "white",
                     "flex": 1,
-                    "marginVertical": 10,
                     "paddingHorizontal": 10,
                   },
                   null,

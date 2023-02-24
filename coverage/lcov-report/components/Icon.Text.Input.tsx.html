@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/Primary.Button.tsx</title>
+    <title>Code coverage report for components/Icon.Text.Input.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">components</a> Primary.Button.tsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">components</a> Icon.Text.Input.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.7% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/17</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -127,9 +127,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,23 +135,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,7 +156,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,61 +180,61 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { StyleSheet, Pressable, ActivityIndicator } from 'react-native';
-import { usePlatform } from '../hooks/usePlatform';
-import { pressedOpacity, Theme } from '../constants/Theme';
-import type { PrimaryButtonProps } from '../constants/Types';
-import { Text } from './Styled.Text';
+import { View, TextInput as DefaultTextInput, StyleSheet } from 'react-native';
+import Icon from '@expo/vector-icons/MaterialCommunityIcons';
+import { Theme } from '../constants/Theme';
+import type { TextInputProps } from '../constants/Types';
 &nbsp;
-const { spacing, colors } = Theme;
+const { colors, spacing } = Theme;
 &nbsp;
-export function PrimaryButton({
-  text,
-  loading,
-  backgroundColor,
-  onPress,
+export function IconTextInput({
+  iconName,
+  containerStyle,
   style,
-  ...otherButtonProps
-}: PrimaryButtonProps) {
-  const platform = usePlatform();
-  const { isIos, isAndroid } = platform;
-&nbsp;
-  const buttonStyles = [
+  ...otherInputProps
+}: TextInputProps) {
+  const textInputContainerStyle = [
     styles.container,
-    style ? style : null,
-    {
-      backgroundColor: backgroundColor ? <span class="branch-0 cbranch-no" title="branch not covered" >backgroundColor </span>: Theme.colors.tint,
-    },
+    containerStyle ? <span class="branch-0 cbranch-no" title="branch not covered" >containerStyle </span>: null,
   ];
 &nbsp;
-  return (
-    &lt;Pressable
-      onPress={loading ? null : onPress}
-      android_ripple={{ borderless: false }}
-      style={({ pressed }) =&gt; [
-        ...buttonStyles,
-        pressed &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >isIos </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >pressedOpacity,</span>
-        pressed &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >isAndroid </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >!backgroundColor </span>&amp;&amp; <span class="branch-3 cbranch-no" title="branch not covered" >pressedOpacity,</span>
-      ]}
-      {...otherButtonProps}
-    &gt;
-      {loading &amp;&amp; &lt;ActivityIndicator size={'small'} color={colors.lightText} /&gt;}
+  const textInputStyle = [styles.input, style ? <span class="branch-0 cbranch-no" title="branch not covered" >style </span>: null];
 &nbsp;
-      {!loading &amp;&amp; &lt;Text style={styles.text}&gt;{text}&lt;/Text&gt;}
-    &lt;/Pressable&gt;
+  return (
+    &lt;View style={textInputContainerStyle}&gt;
+      &lt;View style={styles.iconContainer}&gt;
+        &lt;Icon name={iconName} size={16} color={colors.tint} /&gt;
+      &lt;/View&gt;
+      &lt;DefaultTextInput
+        {...otherInputProps}
+        style={textInputStyle}
+        placeholderTextColor="#0007"
+      /&gt;
+    &lt;/View&gt;
   );
 }
 &nbsp;
 const styles = StyleSheet.create({
   container: {
-    padding: spacing.md,
-    borderRadius: spacing.sm,
-    justifyContent: 'center',
+    flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: colors.primary,
+    borderRadius: spacing.sm,
+    borderWidth: 2,
+    borderColor: colors.secondary,
+    overflow: 'hidden',
   },
-  text: {
-    color: colors.lightText,
-    fontWeight: 'bold',
+  input: {
+    flex: 1,
+    backgroundColor: colors.primary,
+    paddingHorizontal: spacing.sm,
+    // marginVertical: spacing.sm,
+  },
+  iconContainer: {
+    padding: spacing.sm,
+    backgroundColor: colors.secondary,
+    borderColor: colors.secondary,
+    borderWidth: 2,
   },
 });
 &nbsp;</pre></td></tr></table></pre>

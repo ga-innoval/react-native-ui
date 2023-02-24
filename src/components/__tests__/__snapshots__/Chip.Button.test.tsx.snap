@@ -2,116 +2,142 @@
 
 exports[`<ChipButton /> custom style should render correctly 1`] = `
 <View
-  accessible={true}
-  collapsable={false}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
   style={
     [
       {
-        "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 100,
-        "flexDirection": "row",
-        "justifyContent": "center",
-        "paddingHorizontal": 15,
-        "paddingVertical": 10,
+        "overflow": "hidden",
       },
       {
         "marginTop": 10,
       },
-      {
-        "backgroundColor": "#232222",
-      },
     ]
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       [
         {
-          "color": "white",
-          "fontSize": 20,
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
         },
-        undefined,
         {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
+          "backgroundColor": "#232222",
         },
-        {},
+        false,
+        false,
       ]
     }
   >
-    󰀄
-  </Text>
-  <Text
-    style={
-      {
-        "color": "white",
-        "fontWeight": "bold",
-        "marginLeft": 5,
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": "white",
+            "fontSize": 20,
+          },
+          undefined,
+          {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
       }
-    }
-  >
-    Press me
-  </Text>
+    >
+      󰀄
+    </Text>
+    <Text
+      style={
+        {
+          "color": "white",
+          "fontWeight": "bold",
+          "marginLeft": 5,
+        }
+      }
+    >
+      Press me
+    </Text>
+  </View>
 </View>
 `;
 
 exports[`<ChipButton /> no custom style should render correctly 1`] = `
 <View
-  accessible={true}
-  collapsable={false}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
   style={
     [
       {
-        "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 100,
-        "flexDirection": "row",
-        "justifyContent": "center",
-        "paddingHorizontal": 15,
-        "paddingVertical": 10,
+        "overflow": "hidden",
       },
-      null,
-      {
-        "backgroundColor": "#232222",
-      },
+      undefined,
     ]
   }
 >
-  <Text />
-  <Text
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      {
-        "color": "white",
-        "fontWeight": "bold",
-        "marginLeft": 5,
-      }
+      [
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        },
+        {
+          "backgroundColor": "#232222",
+        },
+        false,
+        false,
+      ]
     }
   >
-    Press me
-  </Text>
+    <Text />
+    <Text
+      style={
+        {
+          "color": "white",
+          "fontWeight": "bold",
+          "marginLeft": 5,
+        }
+      }
+    >
+      Press me
+    </Text>
+  </View>
 </View>
 `;
