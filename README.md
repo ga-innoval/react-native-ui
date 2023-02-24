@@ -2,16 +2,12 @@
 
 [![CI](https://github.com/ga-innoval/react-native-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/ga-innoval/react-native-ui/actions/workflows/ci.yml)
 
+![Coverage lines](https://github.com/ga-innoval/react-native-ui/coverage/badge-lines.svg)
 
 A collection of production-ready customizable components for React Native, following @ga-innoval design guidelines.
 
-![Coverage lines](https://github.com/ga-innoval/react-native-ui/coverage/badge-lines.svg)
-
-Una colección de componentes para React Native personalizables y listos para producción, siguiendo las pautas de diseño de Innoval.
-
 **Warning**
 This package is WIP. You may encounter errors.
-
 
 ## Installation
 

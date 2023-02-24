@@ -37,6 +37,7 @@ exports[`<IconTextInput /> should render correctly 1`] = `
         {
           "backgroundColor": "white",
           "flex": 1,
+          "fontSize": 16,
           "paddingHorizontal": 10,
         },
         null,

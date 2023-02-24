@@ -27,9 +27,15 @@ exports[`<LinkButton /> should render correctly 1`] = `
 >
   <Text
     style={
-      {
-        "color": "#748EEC",
-      }
+      [
+        {
+          "color": "#7A7878",
+          "fontSize": 16,
+        },
+        {
+          "color": "#748EEC",
+        },
+      ]
     }
   >
     Press me

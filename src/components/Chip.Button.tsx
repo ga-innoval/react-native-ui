@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '@expo/vector-icons/MaterialCommunityIcons';
-import { Text, Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from './Styled.Text';
 
 import { pressedOpacity, Theme } from '../constants/Theme';
 const { spacing } = Theme;

@@ -69,11 +69,17 @@ exports[`<ChipButton /> custom style should render correctly 1`] = `
     </Text>
     <Text
       style={
-        {
-          "color": "white",
-          "fontWeight": "bold",
-          "marginLeft": 5,
-        }
+        [
+          {
+            "color": "#7A7878",
+            "fontSize": 16,
+          },
+          {
+            "color": "white",
+            "fontWeight": "bold",
+            "marginLeft": 5,
+          },
+        ]
       }
     >
       Press me
@@ -129,11 +135,17 @@ exports[`<ChipButton /> no custom style should render correctly 1`] = `
     <Text />
     <Text
       style={
-        {
-          "color": "white",
-          "fontWeight": "bold",
-          "marginLeft": 5,
-        }
+        [
+          {
+            "color": "#7A7878",
+            "fontSize": 16,
+          },
+          {
+            "color": "white",
+            "fontWeight": "bold",
+            "marginLeft": 5,
+          },
+        ]
       }
     >
       Press me

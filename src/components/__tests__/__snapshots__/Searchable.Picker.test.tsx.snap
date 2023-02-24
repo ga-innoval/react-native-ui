@@ -31,7 +31,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
         [
           {
             "color": "#7A7878",
-            "fontSize": 14,
+            "fontSize": 16,
           },
           undefined,
         ]
@@ -182,6 +182,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
                   {
                     "backgroundColor": "white",
                     "flex": 1,
+                    "fontSize": 16,
                     "paddingHorizontal": 10,
                   },
                   null,
@@ -252,7 +253,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
                       [
                         {
                           "color": "#7A7878",
-                          "fontSize": 14,
+                          "fontSize": 16,
                         },
                         undefined,
                       ]
@@ -294,7 +295,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
                       [
                         {
                           "color": "#7A7878",
-                          "fontSize": 14,
+                          "fontSize": 16,
                         },
                         undefined,
                       ]
@@ -358,7 +359,7 @@ exports[`<SearchablePicker /> should render picker button correctly 1`] = `
         [
           {
             "color": "#7A7878",
-            "fontSize": 14,
+            "fontSize": 16,
           },
           undefined,
         ]

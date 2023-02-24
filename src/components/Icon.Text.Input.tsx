@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.primary,
     paddingHorizontal: spacing.sm,
-    // marginVertical: spacing.sm,
+    fontSize: 16,
   },
   iconContainer: {
     padding: spacing.sm,

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
+import { Text } from './Styled.Text';
 import Icon from '@expo/vector-icons/MaterialCommunityIcons';
 import { Theme } from '../constants/Theme';
 import type { LinkButtonProps } from '../constants/Types';
