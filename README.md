@@ -6,8 +6,6 @@
 
 A collection of production-ready customizable components for React Native, following @ga-innoval design guidelines.
 
-**Warning**
-This package is WIP. You may encounter errors.
 
 ## Installation
 
