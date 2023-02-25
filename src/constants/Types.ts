@@ -13,7 +13,7 @@ export interface ButtonProps extends PressableProps {
   text: string;
   onPress: () => void;
   loading?: boolean;
-  style?: ViewStyle;
+  style?: ViewStyle | Array<ViewStyle>;
 }
 
 export interface PrimaryButtonProps extends ButtonProps {
@@ -21,7 +21,9 @@ export interface PrimaryButtonProps extends ButtonProps {
 }
 
 export interface ActionButtonProps extends ButtonProps {
-  icon?: typeof Icon;
+  iconName?: keyof typeof Icon.glyphMap;
+  iconColor?: ColorValue;
+  iconBgColor?: ColorValue;
 }
 
 export interface AlertModalProps extends ModalProps {
@@ -37,15 +39,12 @@ export interface BottomModalProps {
   containerStyle?: ViewStyle;
 }
 
-export interface ChipButtonProps {
-  onPress: () => void;
+export interface ChipButtonProps extends ButtonProps {
   iconName?: keyof typeof Icon.glyphMap;
-  text: string;
   backgroundColor?: ColorValue;
-  containerStyle?: ViewStyle;
 }
 
-export interface LinkButtonProps {
+export interface LinkButtonProps extends ButtonProps {
   text: string;
   onPress: () => void;
 }
@@ -55,14 +54,16 @@ export interface MaskContainerProps {
 }
 
 export interface TextInputProps extends DefaultTextInputProps {
-  icon: string;
+  iconName: keyof typeof Icon.glyphMap;
+  containerStyle?: ViewStyle | ViewStyle[];
 }
 
-type PickerItem = { label: string; value: string | number };
+export type PickerItem = { label: string; value: string | number };
 
 export interface SearchablePickerProps {
-  text: string;
+  placeholder: string;
   data: Array<PickerItem>;
-  selectedItem: PickerItem;
-  onItemSelected: (item: PickerItem) => void;
+  selectedItem?: PickerItem | null;
+  onItemSelected?: (item: PickerItem) => void;
+  style?: ViewStyle | ViewStyle[];
 }

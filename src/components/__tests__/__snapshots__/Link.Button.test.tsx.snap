@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkButton /> should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginBottom": 10,
+      },
+      null,
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#7A7878",
+          "fontSize": 16,
+        },
+        {
+          "color": "#748EEC",
+        },
+      ]
+    }
+  >
+    Press me
+  </Text>
+  <Text />
+</View>
+`;

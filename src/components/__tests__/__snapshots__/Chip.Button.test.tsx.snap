@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChipButton /> custom style should render correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 100,
+        "overflow": "hidden",
+      },
+      {
+        "marginTop": 10,
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        },
+        {
+          "backgroundColor": "#232222",
+        },
+        false,
+        false,
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": "white",
+            "fontSize": 20,
+          },
+          undefined,
+          {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      󰀄
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#7A7878",
+            "fontSize": 16,
+          },
+          {
+            "color": "white",
+            "fontWeight": "bold",
+            "marginLeft": 5,
+          },
+        ]
+      }
+    >
+      Press me
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<ChipButton /> no custom style should render correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 100,
+        "overflow": "hidden",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        },
+        {
+          "backgroundColor": "#232222",
+        },
+        false,
+        false,
+      ]
+    }
+  >
+    <Text />
+    <Text
+      style={
+        [
+          {
+            "color": "#7A7878",
+            "fontSize": 16,
+          },
+          {
+            "color": "white",
+            "fontWeight": "bold",
+            "marginLeft": 5,
+          },
+        ]
+      }
+    >
+      Press me
+    </Text>
+  </View>
+</View>
+`;

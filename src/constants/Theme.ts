@@ -1,3 +1,5 @@
+export const pressedOpacity = { opacity: 0.8 };
+
 export const Theme = {
   colors: {
     tint: '#232222',

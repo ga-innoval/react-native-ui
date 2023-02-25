@@ -10,9 +10,17 @@ const eventData = {
 
 describe('<PrimaryButton loading={false} />', () => {
   const mockFn = jest.fn();
+  let component: any = null;
 
   beforeEach(() => {
-    render(<PrimaryButton text="Press me" loading={false} onPress={mockFn} />);
+    component = render(
+      <PrimaryButton text="Press me" loading={false} onPress={mockFn} />
+    );
+  });
+
+  it('should render correctly', () => {
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('should display text label', () => {
@@ -28,9 +36,10 @@ describe('<PrimaryButton loading={false} />', () => {
 
 describe('<PrimaryButton loading={true} />', () => {
   const mockFn = jest.fn();
+  let component: any = null;
 
   beforeEach(() => {
-    render(
+    component = render(
       <PrimaryButton
         text="Press me"
         loading={true}
@@ -38,6 +47,11 @@ describe('<PrimaryButton loading={true} />', () => {
         accessibilityHint="button"
       />
     );
+  });
+
+  it('should render correctly', () => {
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it("shouldn't display text label", () => {
@@ -48,5 +62,25 @@ describe('<PrimaryButton loading={true} />', () => {
     const button = screen.getByAccessibilityHint('button');
     fireEvent.press(button, eventData);
     expect(mockFn).not.toHaveBeenCalled();
+  });
+});
+
+describe('<PrimaryButton custom style />', () => {
+  let component: any = null;
+
+  beforeEach(() => {
+    component = render(
+      <PrimaryButton
+        style={{ marginTop: 10 }}
+        text="Press me"
+        loading={false}
+        onPress={() => {}}
+      />
+    );
+  });
+
+  it('Should render correctly', () => {
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
