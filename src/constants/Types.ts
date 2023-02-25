@@ -21,7 +21,9 @@ export interface PrimaryButtonProps extends ButtonProps {
 }
 
 export interface ActionButtonProps extends ButtonProps {
-  icon?: typeof Icon;
+  iconName?: keyof typeof Icon.glyphMap;
+  iconColor?: ColorValue;
+  iconBgColor?: ColorValue;
 }
 
 export interface AlertModalProps extends ModalProps {

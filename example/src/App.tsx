@@ -11,6 +11,7 @@ import {
   IconTextInput,
   SearchablePicker,
   PickerItem,
+  ActionButton,
 } from '@ga-innoval/react-native-ui';
 
 export default function App() {
@@ -80,6 +81,15 @@ export default function App() {
           { label: 'Mango', value: 8 },
         ]}
         placeholder="Selecciona una fruta"
+      />
+
+      <ActionButton
+        iconName="check"
+        iconColor={'blue'}
+        iconBgColor={'red'}
+        text="Do something"
+        loading={false}
+        onPress={() => {}}
       />
 
       <AlertModal title="Alerta" visible={isAlertVisible}>
