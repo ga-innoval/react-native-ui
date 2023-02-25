@@ -67,6 +67,7 @@ export default function App() {
       />
 
       <SearchablePicker
+        style={{ marginBottom: 10 }}
         selectedItem={selectedFruit}
         onItemSelected={(item) => setSelectedFruit({ ...item })}
         data={[

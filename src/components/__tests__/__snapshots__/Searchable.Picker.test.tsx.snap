@@ -16,14 +16,20 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      {
-        "alignItems": "center",
-        "backgroundColor": "white",
-        "borderRadius": 10,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-        "padding": 15,
-      }
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderRadius": 10,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "padding": 15,
+        },
+        {
+          "marginTop": 10,
+        },
+        false,
+      ]
     }
   >
     <Text
@@ -344,14 +350,20 @@ exports[`<SearchablePicker /> should render picker button correctly 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      {
-        "alignItems": "center",
-        "backgroundColor": "white",
-        "borderRadius": 10,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-        "padding": 15,
-      }
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderRadius": 10,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "padding": 15,
+        },
+        {
+          "marginTop": 10,
+        },
+        false,
+      ]
     }
   >
     <Text

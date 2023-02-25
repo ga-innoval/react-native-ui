@@ -65,4 +65,5 @@ export interface SearchablePickerProps {
   data: Array<PickerItem>;
   selectedItem?: PickerItem | null;
   onItemSelected?: (item: PickerItem) => void;
+  style?: ViewStyle | ViewStyle[];
 }

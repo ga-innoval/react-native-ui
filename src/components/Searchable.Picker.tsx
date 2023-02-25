@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { StyleSheet, Pressable, FlatList } from 'react-native';
 import { Text } from './Styled.Text';
-import { Theme } from '../constants/Theme';
+import { pressedOpacity, Theme } from '../constants/Theme';
 import Icon from '@expo/vector-icons/MaterialCommunityIcons';
 import { BottomModal } from './Bottom.Modal';
 import { IconTextInput } from './Icon.Text.Input';
 import type { SearchablePickerProps } from '../constants/Types';
+import { usePlatform } from '../hooks/usePlatform';
 
 const { colors, spacing } = Theme;
 
@@ -14,19 +15,28 @@ export function SearchablePicker({
   data,
   selectedItem,
   onItemSelected,
+  style,
 }: SearchablePickerProps) {
+  const platform = usePlatform();
+  const { isIos } = platform;
+
   const [isVisible, setIsVisible] = useState(false);
   const [filterValue, setFilterValue] = useState('');
   const filteredData = data.filter((item) =>
     item.label.toLowerCase().includes(filterValue.toLowerCase())
   );
 
+  const buttonStyles = [styles.container, style ? style : null];
+
   return (
     <>
       <Pressable
         android_ripple={{ borderless: false }}
         onPress={() => setIsVisible(!isVisible)}
-        style={styles.container}
+        style={({ pressed }) => [
+          ...buttonStyles,
+          pressed && isIos && pressedOpacity,
+        ]}
       >
         <Text>{selectedItem ? selectedItem.label : placeholder}</Text>
         <Icon name="chevron-down" size={20} color={colors.tint} />

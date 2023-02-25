@@ -15,6 +15,7 @@ describe('<SearchablePicker />', () => {
   beforeEach(() => {
     render(
       <SearchablePicker
+        style={{ marginTop: 10 }}
         selectedItem={null}
         data={[
           { label: 'Banana', value: 0 },
