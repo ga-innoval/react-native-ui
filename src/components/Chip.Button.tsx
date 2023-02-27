@@ -14,7 +14,7 @@ export function ChipButton({
   iconName,
   text,
   backgroundColor,
-  style,
+  // style,
   ...otherButtonProps
 }: ChipButtonProps) {
   const platform = usePlatform();
