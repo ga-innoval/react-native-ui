@@ -58,7 +58,7 @@ export interface TextInputProps extends DefaultTextInputProps {
   containerStyle?: ViewStyle | ViewStyle[];
 }
 
-export type PickerItem = { label: string; value: string | number };
+export type PickerItem = { label: string; value: any };
 
 export interface SearchablePickerProps {
   placeholder: string;
