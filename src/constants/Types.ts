@@ -37,6 +37,7 @@ export interface BottomModalProps {
   onDismiss: () => void;
   children: ReactNode;
   containerStyle?: ViewStyle;
+  showOpacityMask?: boolean;
 }
 
 export interface ChipButtonProps extends ButtonProps {
@@ -66,4 +67,5 @@ export interface SearchablePickerProps {
   selectedItem?: PickerItem | null;
   onItemSelected?: (item: PickerItem) => void;
   style?: ViewStyle | ViewStyle[];
+  showOpacityMask?: boolean;
 }

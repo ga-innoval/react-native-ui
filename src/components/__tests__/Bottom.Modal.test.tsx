@@ -32,6 +32,23 @@ describe('<BottomModal visible={true}/>', () => {
   });
 });
 
+describe('<BottomModal visible={true} showOpacityMask={false}/>', () => {
+  let component: any = null;
+  const mockFn = jest.fn();
+
+  beforeEach(() => {
+    component = render(
+      <BottomModal showOpacityMask={false} onDismiss={mockFn} visible={true}>
+        <Text>child component</Text>
+      </BottomModal>
+    );
+  });
+  it('should render correctly', () => {
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
 describe('<BottomModal visible={false}/>', () => {
   it('should not render', () => {
     render(

@@ -20,8 +20,10 @@ export function BottomModal({
   onDismiss,
   children,
   containerStyle,
+  showOpacityMask,
 }: BottomModalProps) {
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+  const showMask = showOpacityMask ?? true;
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
@@ -66,8 +68,7 @@ export function BottomModal({
           </View>
         </View>
       </Modal>
-
-      <OpacityMask visible={visible} />
+      {showMask && <OpacityMask visible={visible} />}
     </>
   );
 }

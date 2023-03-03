@@ -16,6 +16,7 @@ export function SearchablePicker({
   selectedItem,
   onItemSelected,
   style,
+  showOpacityMask,
 }: SearchablePickerProps) {
   const platform = usePlatform();
   const { isIos } = platform;
@@ -43,6 +44,7 @@ export function SearchablePicker({
       </Pressable>
 
       <BottomModal
+        showOpacityMask={showOpacityMask ?? true}
         containerStyle={{ backgroundColor: colors.background }}
         visible={isVisible}
         onDismiss={() => setIsVisible(false)}

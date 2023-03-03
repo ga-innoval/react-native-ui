@@ -1,5 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<BottomModal visible={true} showOpacityMask={false}/> should render correctly 1`] = `
+<Modal
+  animationType="slide"
+  hardwareAccelerated={false}
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "height": 667,
+            "position": "relative",
+          },
+          false,
+        ]
+      }
+      testID="modalPressableArea"
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "white",
+            "borderTopLeftRadius": 15,
+            "borderTopRightRadius": 15,
+            "bottom": 0,
+            "height": 667,
+            "position": "relative",
+          },
+          false,
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "paddingHorizontal": 15,
+            "paddingVertical": 25,
+          }
+        }
+      >
+        <Text>
+          child component
+        </Text>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
+
 exports[`<BottomModal visible={true}/> should render correctly 1`] = `
 [
   <Modal
