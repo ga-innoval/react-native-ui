@@ -100,6 +100,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
               "position": "relative",
             },
             false,
+            undefined,
           ]
         }
         testID="modalPressableArea"

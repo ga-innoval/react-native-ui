@@ -34,6 +34,7 @@ exports[`<BottomModal visible={true} showOpacityMask={false}/> should render cor
             "position": "relative",
           },
           false,
+          undefined,
         ]
       }
       testID="modalPressableArea"
@@ -107,6 +108,7 @@ exports[`<BottomModal visible={true}/> should render correctly 1`] = `
               "position": "relative",
             },
             false,
+            undefined,
           ]
         }
         testID="modalPressableArea"
