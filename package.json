@@ -1,6 +1,6 @@
 {
   "name": "@ga-innoval/react-native-ui",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A collection of production-ready customizable components for React Native, following @ga-innoval design guidelines.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
