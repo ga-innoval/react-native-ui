@@ -21,9 +21,12 @@ export function BottomModal({
   children,
   containerStyle,
   showOpacityMask,
+  persistent,
 }: BottomModalProps) {
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
   const showMask = showOpacityMask ?? true;
+
+  const shouldDisplay = persistent || visible;
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
@@ -47,13 +50,14 @@ export function BottomModal({
 
   return (
     <>
-      <Modal animationType="slide" transparent={true} visible={visible}>
+      <Modal animationType="slide" transparent={true} visible={shouldDisplay}>
         <View style={styles.menuContainer}>
           <Pressable
             testID="modalPressableArea"
             style={[
               styles.dismissArea,
               isKeyboardVisible && { height: screenHeight / 8 },
+              persistent && { height: screenHeight - 150 },
             ]}
             onPress={onDismiss}
           />
@@ -68,7 +72,7 @@ export function BottomModal({
           </View>
         </View>
       </Modal>
-      {showMask && <OpacityMask visible={visible} />}
+      {showMask && <OpacityMask visible={shouldDisplay} />}
     </>
   );
 }

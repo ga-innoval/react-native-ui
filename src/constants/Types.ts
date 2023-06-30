@@ -37,12 +37,14 @@ export interface BottomModalProps {
   onDismiss: () => void;
   children: ReactNode;
   containerStyle?: ViewStyle;
+  persistent?: boolean;
   showOpacityMask?: boolean;
 }
 
 export interface ChipButtonProps extends ButtonProps {
   iconName?: keyof typeof Icon.glyphMap;
   backgroundColor?: ColorValue;
+  color?: ColorValue;
 }
 
 export interface LinkButtonProps extends ButtonProps {

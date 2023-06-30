@@ -13,6 +13,7 @@ export function ChipButton({
   onPress,
   iconName,
   text,
+  color,
   backgroundColor,
   style,
   ...otherButtonProps
@@ -39,8 +40,12 @@ export function ChipButton({
         ]}
         {...otherButtonProps}
       >
-        {iconName && <Icon name={iconName} size={20} color="white" />}
-        <Text style={styles.actionText}>{text}</Text>
+        {iconName && (
+          <Icon name={iconName} size={20} color={color ?? 'white'} />
+        )}
+        <Text style={[styles.actionText, { color: color ?? 'white' }]}>
+          {text}
+        </Text>
       </Pressable>
     </View>
   );
@@ -62,7 +67,6 @@ const styles = StyleSheet.create({
   },
   actionText: {
     fontWeight: 'bold',
-    color: 'white',
     marginLeft: spacing.sm / 2,
   },
 });

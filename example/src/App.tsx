@@ -46,6 +46,7 @@ export default function App() {
       <ChipButton
         style={styles.marginBottom}
         iconName="door-open"
+        color={'red'}
         backgroundColor={'#40ABE8'}
         text="Open alert"
         onPress={() => setIsAlertVisible(true)}
@@ -105,6 +106,7 @@ export default function App() {
       </AlertModal>
 
       <BottomModal
+        persistent={false}
         visible={isBottomModalVisible}
         onDismiss={() => setIsBottomModalVisible(false)}
       >
