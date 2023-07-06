@@ -68,6 +68,7 @@ export default function App() {
       />
 
       <SearchablePicker
+        loading={false}
         style={{ marginBottom: 10 }}
         selectedItem={selectedFruit}
         onItemSelected={(item) => setSelectedFruit({ ...item })}

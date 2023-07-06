@@ -70,4 +70,6 @@ export interface SearchablePickerProps {
   onItemSelected?: (item: PickerItem) => void;
   style?: ViewStyle | ViewStyle[];
   showOpacityMask?: boolean;
+  loading?: boolean;
+  loadingIndicatorColor?: ColorValue;
 }

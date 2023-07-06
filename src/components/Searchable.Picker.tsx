@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Pressable, FlatList } from 'react-native';
+import {
+  StyleSheet,
+  Pressable,
+  FlatList,
+  ActivityIndicator,
+} from 'react-native';
 import { Text } from './Styled.Text';
 import { pressedOpacity, Theme } from '../constants/Theme';
 import Icon from '@expo/vector-icons/MaterialCommunityIcons';
@@ -17,6 +22,8 @@ export function SearchablePicker({
   onItemSelected,
   style,
   showOpacityMask,
+  loading,
+  loadingIndicatorColor,
 }: SearchablePickerProps) {
   const platform = usePlatform();
   const { isIos } = platform;
@@ -39,7 +46,16 @@ export function SearchablePicker({
           pressed && isIos && pressedOpacity,
         ]}
       >
-        <Text>{selectedItem ? selectedItem.label : placeholder}</Text>
+        {loading ? (
+          <ActivityIndicator
+            style={styles.loadingIndicator}
+            color={loadingIndicatorColor ?? colors.darkText}
+          />
+        ) : (
+          <Text style={selectedItem && { color: Theme.colors.tint }}>
+            {selectedItem ? selectedItem.label : placeholder}
+          </Text>
+        )}
         <Icon name="chevron-down" size={20} color={colors.tint} />
       </Pressable>
 
@@ -93,5 +109,9 @@ const styles = StyleSheet.create({
     marginVertical: spacing.sm,
     borderBottomWidth: 1,
     borderColor: colors.secondary,
+  },
+  loadingIndicator: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 });
