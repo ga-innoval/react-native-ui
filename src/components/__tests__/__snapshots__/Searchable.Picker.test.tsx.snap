@@ -39,7 +39,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
             "color": "#7A7878",
             "fontSize": 16,
           },
-          undefined,
+          null,
         ]
       }
     >
@@ -374,7 +374,7 @@ exports[`<SearchablePicker /> should render picker button correctly 1`] = `
             "color": "#7A7878",
             "fontSize": 16,
           },
-          undefined,
+          null,
         ]
       }
     >
