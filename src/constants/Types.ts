@@ -63,13 +63,21 @@ export interface TextInputProps extends DefaultTextInputProps {
 
 export type PickerItem = { label: string; value: any };
 
-export interface SearchablePickerProps {
+export interface BaseSearchablePickerProps {
   placeholder: string;
   data: Array<PickerItem>;
-  selectedItem?: PickerItem | null;
   onItemSelected?: (item: PickerItem) => void;
   style?: ViewStyle | ViewStyle[];
   showOpacityMask?: boolean;
   loading?: boolean;
   loadingIndicatorColor?: ColorValue;
+}
+
+export interface SearchablePickerProps extends BaseSearchablePickerProps {
+  selectedItem?: PickerItem | null;
+}
+
+export interface MultipleSearchablePickerProps
+  extends BaseSearchablePickerProps {
+  selectedItems: PickerItem[];
 }

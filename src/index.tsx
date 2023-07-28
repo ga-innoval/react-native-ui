@@ -10,6 +10,7 @@ import { IconTextInput } from './components/Icon.Text.Input';
 import { SearchablePicker } from './components/Searchable.Picker';
 import { ActionButton } from './components/Action.Button';
 import type { PickerItem } from './constants/Types';
+import { MultipleSearchablePicker } from './components/Multiple.Searchable.Picker';
 
 export {
   PrimaryButton,
@@ -23,6 +24,7 @@ export {
   IconTextInput,
   SearchablePicker,
   PickerItem,
+  MultipleSearchablePicker,
 };
 
 export default NativeModules.RNInnovalUiComponentsModule;

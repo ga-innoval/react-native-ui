@@ -12,6 +12,7 @@ import {
   SearchablePicker,
   PickerItem,
   ActionButton,
+  MultipleSearchablePicker,
 } from '@ga-innoval/react-native-ui';
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
   const [isBottomModalVisible, setIsBottomModalVisible] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [selectedFruit, setSelectedFruit] = useState<PickerItem | null>(null);
+  const [selectedFruits, setSelectedFruits] = useState<PickerItem[]>([]);
 
   const handlePrimaryButtonPress = () => {
     setPrimaryButtonLoading(true);
@@ -72,6 +74,25 @@ export default function App() {
         style={{ marginBottom: 10 }}
         selectedItem={selectedFruit}
         onItemSelected={(item) => setSelectedFruit({ ...item })}
+        data={[
+          { label: 'Banana', value: 0 },
+          { label: 'Apple', value: 1 },
+          { label: 'Watermelon', value: 2 },
+          { label: 'Orange', value: 3 },
+          { label: 'Lemon', value: 4 },
+          { label: 'Pineapple', value: 5 },
+          { label: 'Grape', value: 6 },
+          { label: 'Avocado', value: 7 },
+          { label: 'Mango', value: 8 },
+        ]}
+        placeholder="Selecciona una fruta"
+      />
+
+      <MultipleSearchablePicker
+        loading={false}
+        style={{ marginBottom: 10 }}
+        selectedItems={selectedFruits}
+        onItemSelected={(item) => setSelectedFruits([...selectedFruits, item])}
         data={[
           { label: 'Banana', value: 0 },
           { label: 'Apple', value: 1 },

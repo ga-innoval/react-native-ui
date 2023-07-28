@@ -10,21 +10,24 @@ import { pressedOpacity, Theme } from '../constants/Theme';
 import Icon from '@expo/vector-icons/MaterialCommunityIcons';
 import { BottomModal } from './Bottom.Modal';
 import { IconTextInput } from './Icon.Text.Input';
-import type { SearchablePickerProps } from '../constants/Types';
+import type {
+  MultipleSearchablePickerProps,
+  PickerItem,
+} from '../constants/Types';
 import { usePlatform } from '../hooks/usePlatform';
 
 const { colors, spacing } = Theme;
 
-export function SearchablePicker({
+export function MultipleSearchablePicker({
   placeholder,
   data,
-  selectedItem,
+  selectedItems,
   onItemSelected,
   style,
   showOpacityMask,
   loading,
   loadingIndicatorColor,
-}: SearchablePickerProps) {
+}: MultipleSearchablePickerProps) {
   const platform = usePlatform();
   const { isIos } = platform;
 
@@ -35,6 +38,14 @@ export function SearchablePicker({
   );
 
   const buttonStyles = [styles.container, style ? style : null];
+
+  const areSelectedItems = selectedItems?.length > 0;
+
+  const containsItem = (item: PickerItem) => {
+    return selectedItems.some(
+      (selectedItem) => selectedItem.value === item.value
+    );
+  };
 
   return (
     <>
@@ -52,8 +63,10 @@ export function SearchablePicker({
             color={loadingIndicatorColor ?? colors.darkText}
           />
         ) : (
-          <Text style={selectedItem && { color: Theme.colors.tint }}>
-            {selectedItem ? selectedItem.label : placeholder}
+          <Text style={areSelectedItems && { color: Theme.colors.tint }}>
+            {areSelectedItems
+              ? selectedItems.map((item) => item.label).join(', ')
+              : placeholder}
           </Text>
         )}
         <Icon name="chevron-down" size={20} color={colors.tint} />
@@ -84,7 +97,7 @@ export function SearchablePicker({
               android_ripple={{ borderless: false }}
               style={[
                 styles.pickerItem,
-                selectedItem?.value === item.value && styles.selectedItem,
+                containsItem(item) && styles.selectedItem,
               ]}
             >
               <Text>{item.label}</Text>

@@ -246,13 +246,16 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    {
-                      "alignItems": "center",
-                      "borderBottomWidth": 1,
-                      "borderColor": "#E1E1E3",
-                      "marginVertical": 10,
-                      "padding": 10,
-                    }
+                    [
+                      {
+                        "alignItems": "center",
+                        "borderBottomWidth": 1,
+                        "borderColor": "#E1E1E3",
+                        "marginVertical": 10,
+                        "padding": 10,
+                      },
+                      false,
+                    ]
                   }
                 >
                   <Text
@@ -288,13 +291,16 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    {
-                      "alignItems": "center",
-                      "borderBottomWidth": 1,
-                      "borderColor": "#E1E1E3",
-                      "marginVertical": 10,
-                      "padding": 10,
-                    }
+                    [
+                      {
+                        "alignItems": "center",
+                        "borderBottomWidth": 1,
+                        "borderColor": "#E1E1E3",
+                        "marginVertical": 10,
+                        "padding": 10,
+                      },
+                      false,
+                    ]
                   }
                 >
                   <Text
