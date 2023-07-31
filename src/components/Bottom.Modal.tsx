@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -6,6 +6,7 @@ import {
   View,
   Pressable,
   Keyboard,
+  Animated,
 } from 'react-native';
 
 import { Theme } from '../constants/Theme';
@@ -23,22 +24,43 @@ export function BottomModal({
   showOpacityMask,
   persistent,
 }: BottomModalProps) {
-  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
   const showMask = showOpacityMask ?? true;
 
   const shouldDisplay = persistent || visible;
+  const heightAnim = useRef(new Animated.Value(screenHeight / 2)).current;
+
+  const decreaseHeight = useCallback(() => {
+    Animated.timing(heightAnim, {
+      toValue: screenHeight / 9,
+      duration: 300,
+      useNativeDriver: false,
+    }).start();
+  }, [heightAnim]);
+
+  const increaseHeight = useCallback(() => {
+    Animated.timing(heightAnim, {
+      toValue: screenHeight / 2,
+      duration: 300,
+      useNativeDriver: false,
+    }).start();
+  }, [heightAnim]);
+
+  const handleDismiss = () => {
+    increaseHeight();
+    onDismiss();
+  };
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
       'keyboardDidShow',
       () => {
-        setKeyboardVisible(true);
+        decreaseHeight();
       }
     );
     const keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
       () => {
-        setKeyboardVisible(false);
+        increaseHeight();
       }
     );
 
@@ -46,30 +68,27 @@ export function BottomModal({
       keyboardDidHideListener.remove();
       keyboardDidShowListener.remove();
     };
-  }, []);
+  }, [decreaseHeight, increaseHeight]);
 
   return (
     <>
       <Modal animationType="slide" transparent={true} visible={shouldDisplay}>
         <View style={styles.menuContainer}>
-          <Pressable
-            testID="modalPressableArea"
+          <Animated.View
             style={[
-              styles.dismissArea,
-              isKeyboardVisible && { height: screenHeight / 8 },
+              { height: heightAnim },
               persistent && { height: screenHeight - 150 },
             ]}
-            onPress={onDismiss}
-          />
-          <View
-            style={[
-              styles.modalContainer,
-              isKeyboardVisible && { height: screenHeight },
-              containerStyle,
-            ]}
           >
+            <Pressable
+              testID="modalPressableArea"
+              style={styles.dismissArea}
+              onPress={handleDismiss}
+            />
+          </Animated.View>
+          <Animated.View style={[styles.modalContainer, containerStyle]}>
             <View style={styles.childrenContainer}>{children}</View>
-          </View>
+          </Animated.View>
         </View>
       </Modal>
       {showMask && <OpacityMask visible={shouldDisplay} />}
@@ -85,9 +104,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     position: 'relative',
     bottom: 0,
-    height: screenHeight / 2,
     borderTopRightRadius: spacing.md,
     borderTopLeftRadius: spacing.md,
+    flex: 1,
   },
   modalText: {
     marginBottom: 15,
