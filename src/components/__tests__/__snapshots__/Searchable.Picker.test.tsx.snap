@@ -199,6 +199,7 @@ exports[`<SearchablePicker /> should render modal correctly 1`] = `
             />
           </View>
           <RCTScrollView
+            ListEmptyComponent={null}
             data={
               [
                 {

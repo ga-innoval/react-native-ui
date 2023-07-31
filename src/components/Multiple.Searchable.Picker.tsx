@@ -27,6 +27,8 @@ export function MultipleSearchablePicker({
   showOpacityMask,
   loading,
   loadingIndicatorColor,
+  FilteredListEmptyComponent,
+  ListEmptyComponent,
 }: MultipleSearchablePickerProps) {
   const platform = usePlatform();
   const { isIos } = platform;
@@ -86,6 +88,17 @@ export function MultipleSearchablePicker({
         />
         <FlatList
           data={filteredData}
+          ListEmptyComponent={
+            data.length === 0
+              ? ListEmptyComponent ?? (
+                  <Text>No hay opciones por seleccionar</Text>
+                )
+              : filteredData.length === 0
+              ? FilteredListEmptyComponent ?? (
+                  <Text>No hay opciones con "{filterValue}"</Text>
+                )
+              : null
+          }
           renderItem={({ item }) => (
             <Pressable
               onPress={() => {

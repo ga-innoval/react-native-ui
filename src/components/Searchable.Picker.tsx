@@ -24,6 +24,8 @@ export function SearchablePicker({
   showOpacityMask,
   loading,
   loadingIndicatorColor,
+  ListEmptyComponent,
+  FilteredListEmptyComponent,
 }: SearchablePickerProps) {
   const platform = usePlatform();
   const { isIos } = platform;
@@ -73,6 +75,21 @@ export function SearchablePicker({
         />
         <FlatList
           data={filteredData}
+          ListEmptyComponent={
+            data.length === 0
+              ? ListEmptyComponent ?? (
+                  <Text style={styles.empty}>
+                    No hay opciones para seleccionar
+                  </Text>
+                )
+              : filteredData.length === 0
+              ? FilteredListEmptyComponent ?? (
+                  <Text style={styles.empty}>
+                    No hay opciones con "{filterValue}"
+                  </Text>
+                )
+              : null
+          }
           renderItem={({ item }) => (
             <Pressable
               onPress={() => {
@@ -120,5 +137,9 @@ const styles = StyleSheet.create({
   selectedItem: {
     backgroundColor: 'rgba(54,127,195,0.1)',
     borderRadius: spacing.sm,
+  },
+  empty: {
+    paddingTop: spacing.lg,
+    textAlign: 'center',
   },
 });

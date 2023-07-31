@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import type {
   ColorValue,
   ModalProps,
@@ -71,6 +71,8 @@ export interface BaseSearchablePickerProps {
   showOpacityMask?: boolean;
   loading?: boolean;
   loadingIndicatorColor?: ColorValue;
+  ListEmptyComponent?: ReactElement;
+  FilteredListEmptyComponent?: ReactElement;
 }
 
 export interface SearchablePickerProps extends BaseSearchablePickerProps {
