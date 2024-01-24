@@ -23,6 +23,7 @@ export function BottomModal({
   containerStyle,
   showOpacityMask,
   persistent,
+  opacityMaskZIndex,
 }: BottomModalProps) {
   const showMask = showOpacityMask ?? true;
 
@@ -91,7 +92,9 @@ export function BottomModal({
           </Animated.View>
         </View>
       </Modal>
-      {showMask && <OpacityMask visible={shouldDisplay} />}
+      {showMask && (
+        <OpacityMask zIndex={opacityMaskZIndex} visible={shouldDisplay} />
+      )}
     </>
   );
 }

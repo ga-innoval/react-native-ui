@@ -1,9 +1,19 @@
 import React from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
 
-export function OpacityMask({ visible }: { visible: boolean }) {
+export function OpacityMask({
+  visible,
+  zIndex,
+}: {
+  visible: boolean;
+  zIndex?: number;
+}) {
+  const elevationStyle = {
+    zIndex: zIndex ?? 1,
+    elevation: Platform.OS === 'android' ? zIndex ?? 1 : 0,
+  };
   if (visible) {
-    return <View style={styles.mask} />;
+    return <View style={[styles.mask, elevationStyle]} />;
   }
   return null;
 }
@@ -16,8 +26,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    zIndex: 1,
-    elevation: Platform.OS === 'android' ? 1 : 0,
   },
   maskContainer: {
     flex: 1,

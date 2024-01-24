@@ -39,6 +39,7 @@ export interface BottomModalProps {
   containerStyle?: ViewStyle;
   persistent?: boolean;
   showOpacityMask?: boolean;
+  opacityMaskZIndex?: number;
 }
 
 export interface ChipButtonProps extends ButtonProps {
