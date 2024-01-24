@@ -10,7 +10,6 @@ export function OpacityMask({
 }) {
   const elevationStyle = {
     zIndex: zIndex ?? 1,
-    elevation: Platform.OS === 'android' ? zIndex ?? 1 : 0,
   };
   if (visible) {
     return <View style={[styles.mask, elevationStyle]} />;
@@ -29,5 +28,6 @@ const styles = StyleSheet.create({
   },
   maskContainer: {
     flex: 1,
+    elevation: Platform.OS === 'android' ? 1 : 0,
   },
 });

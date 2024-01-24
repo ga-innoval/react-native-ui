@@ -110,6 +110,9 @@ export function SearchablePicker({
                 if (onItemSelected) {
                   onItemSelected(item);
                   setIsVisible(false);
+                  if (handleDissmiss) {
+                    handleDissmiss();
+                  }
                 }
               }}
               android_ripple={{ borderless: false }}
