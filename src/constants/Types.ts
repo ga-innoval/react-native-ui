@@ -77,6 +77,8 @@ export interface BaseSearchablePickerProps {
 
 export interface SearchablePickerProps extends BaseSearchablePickerProps {
   selectedItem?: PickerItem | null;
+  handlePress?: () => void;
+  handleDissmiss?: () => void;
 }
 
 export interface MultipleSearchablePickerProps

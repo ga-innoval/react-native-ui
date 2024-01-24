@@ -26,6 +26,8 @@ export function SearchablePicker({
   loadingIndicatorColor,
   ListEmptyComponent,
   FilteredListEmptyComponent,
+  handlePress,
+  handleDissmiss,
 }: SearchablePickerProps) {
   const platform = usePlatform();
   const { isIos } = platform;
@@ -42,7 +44,12 @@ export function SearchablePicker({
     <>
       <Pressable
         android_ripple={{ borderless: false }}
-        onPress={() => setIsVisible(!isVisible)}
+        onPress={() => {
+          setIsVisible(!isVisible);
+          if (handlePress) {
+            handlePress();
+          }
+        }}
         style={({ pressed }) => [
           ...buttonStyles,
           pressed && isIos && pressedOpacity,
@@ -65,7 +72,12 @@ export function SearchablePicker({
         showOpacityMask={showOpacityMask ?? true}
         containerStyle={{ backgroundColor: colors.background }}
         visible={isVisible}
-        onDismiss={() => setIsVisible(false)}
+        onDismiss={() => {
+          setIsVisible(false);
+          if (handleDissmiss) {
+            handleDissmiss();
+          }
+        }}
       >
         <IconTextInput
           value={filterValue}
@@ -75,6 +87,8 @@ export function SearchablePicker({
         />
         <FlatList
           data={filteredData}
+          initialNumToRender={10}
+          maxToRenderPerBatch={10}
           ListEmptyComponent={
             data.length === 0
               ? ListEmptyComponent ?? (

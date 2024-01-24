@@ -74,20 +74,24 @@ export default function App() {
         style={{ marginBottom: 10 }}
         selectedItem={selectedFruit}
         onItemSelected={(item) => setSelectedFruit({ ...item })}
-        data={
-          [
-            // { label: 'Banana', value: 0 },
-            // { label: 'Apple', value: 1 },
-            // { label: 'Watermelon', value: 2 },
-            // { label: 'Orange', value: 3 },
-            // { label: 'Lemon', value: 4 },
-            // { label: 'Pineapple', value: 5 },
-            // { label: 'Grape', value: 6 },
-            // { label: 'Avocado', value: 7 },
-            // { label: 'Mango', value: 8 },
-          ]
-        }
+        data={[
+          { label: 'Banana', value: 0 },
+          { label: 'Apple', value: 1 },
+          { label: 'Watermelon', value: 2 },
+          { label: 'Orange', value: 3 },
+          { label: 'Lemon', value: 4 },
+          { label: 'Pineapple', value: 5 },
+          { label: 'Grape', value: 6 },
+          { label: 'Avocado', value: 7 },
+          { label: 'Mango', value: 8 },
+        ]}
         placeholder="Selecciona una fruta"
+        handlePress={() => {
+          console.log('Pressed');
+        }}
+        handleDissmiss={() => {
+          console.log('Dismiss');
+        }}
       />
 
       <MultipleSearchablePicker
@@ -105,6 +109,15 @@ export default function App() {
           { label: 'Grape', value: 6 },
           { label: 'Avocado', value: 7 },
           { label: 'Mango', value: 8 },
+          { label: 'Banana', value: 10 },
+          { label: 'Apple', value: 11 },
+          { label: 'Watermelon', value: 12 },
+          { label: 'Orange', value: 13 },
+          { label: 'Lemon', value: 14 },
+          { label: 'Pineapple', value: 15 },
+          { label: 'Grape', value: 16 },
+          { label: 'Avocado', value: 17 },
+          { label: 'Mango', value: 18 },
         ]}
         placeholder="Selecciona una fruta"
       />
