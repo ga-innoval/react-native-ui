@@ -1,6 +1,6 @@
 {
   "name": "@ga-innoval/react-native-ui",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "description": "A collection of production-ready customizable components for React Native, following @ga-innoval design guidelines.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -88,16 +88,16 @@
   },
   "peerDependencies": {
     "@expo/vector-icons": "^13.0.0",
-    "expo-asset": "^8.7.0",
-    "expo-font": "^11.0.1",
-    "expo-modules-core": "^1.1.1",
+    "expo-asset": "^8.10.1",
+    "expo-font": "^11.4.0",
+    "expo-modules-core": "^1.5.13",
     "react": "*",
     "react-native": "*"
   },
   "engines": {
     "node": ">= 16.0.0"
   },
-  "packageManager": "^yarn@1.22.15",
+  "packageManager": "^yarn@1.22.21",
   "jest": {
     "preset": "jest-expo",
     "modulePathIgnorePatterns": [
